@@ -12,13 +12,22 @@ public class Encapsulation {
      public void getBalance(){
         this.balance = balance;
      }
-     public void setName(String name){
-        this.name = name;
-        System.out.println(name);
+     public void setName(String newname){
+        if(newname != null){
+            name = newname;
+            System.out.println(name);
+        }else{
+            System.out.println("Enter the valid string");
+        }
     }
-    public void setBalance(double balance){
-        this.balance = balance;
-        System.out.println(balance);
+    public void setBalance(double newbalance){
+        if(newbalance>0){
+            balance = newbalance;
+            System.out.println(balance);
+        }else{
+            System.out.println("enter the valid amount");
+        }
+
     }
     public static void main(String[] args){
         Encapsulation encapsulation = new Encapsulation("Satish",15000);
